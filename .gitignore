@@ -130,3 +130,6 @@ dmypy.json
 
 # config key
 *config.py
+
+# compressed
+*.zip
