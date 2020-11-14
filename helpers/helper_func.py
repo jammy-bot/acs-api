@@ -6,6 +6,7 @@ def save_pickle (self, filename=None):
     OUTPUT: - filename = desired string name for the saved object with no extension
     '''
     import os
+    import numpy
     import pickle
 
     # making a pickles directory, if it does not exist
@@ -37,6 +38,7 @@ def read_pickle(filepath, variable_name):
     OUTPUT: - loaded variable
     '''
     import os
+    import numpy
     import pickle
 
     with open(filepath, 'rb') as f:
