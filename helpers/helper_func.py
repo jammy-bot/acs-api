@@ -20,7 +20,7 @@ def save_pickle (self, filename=None):
     # instantiating the name for the saved file, with '.pkl' extension
     save_name = filename + '.pkl'
 
-    print("-"*15, f"PICKLING {save_name}", "-"*25)
+    print("-"*15, f"PICKLING {filename}", "-"*25)
 
     # serializing the file
     with open(f'pickles/{save_name}', 'wb') as f:
@@ -29,13 +29,12 @@ def save_pickle (self, filename=None):
 
 
 # creating a function to deserialize and instantiate objects
-def read_pickle(filepath, variable_name):
+def read_pickle(filepath):
     ''' takes a string file(path) of a pickled file
-    and returns its de - serialized object as 'variable_name'
+    and returns its de - serialized object'
 
     INPUT:  - filepath = (str) path to file
-            - variable_name = name of loaded variable
-    OUTPUT: - loaded variable
+    OUTPUT: - loaded variable (instantiate with "variable = read_pickle(filepath)")
     '''
     import os
     import numpy
@@ -43,5 +42,5 @@ def read_pickle(filepath, variable_name):
 
     with open(filepath, 'rb') as f:
         variable_name = pickle.load(f)
-    print(f"File restored from {filepath}")
+    print(f"Object restored from {filepath}")
     return (variable_name)
