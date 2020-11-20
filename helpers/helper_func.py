@@ -44,3 +44,27 @@ def read_pickle(filepath):
         variable_name = pickle.load(f)
     print(f"Object restored from {filepath}")
     return (variable_name)
+
+
+def string_to_integer(df_cols):
+    """ Converts string type columns to integers
+    - INPUT:    dataframe column slice
+                <df[["col"]]> for a single column, 
+                or <df[list_cols]> for a list of columns.
+    - OUTPUT: converte columns
+    """
+    print( "Converting...................")
+    return df_cols.astype('int64')
+
+
+def string_to_float(df_cols):
+    """Converts string type columns to floats,
+        rounded to a single decimal place
+    - INPUT:    dataframe column slice
+                <df[["col"]]> for a single column, 
+                or <df[list_cols]> for a list of columns.
+    - OUTPUT:   None. Dataframe columns are converted to floats.
+        
+    """
+    print( "Converting...................")
+    return df_cols.astype('float')

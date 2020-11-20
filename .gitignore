@@ -143,3 +143,6 @@ helpers/
 
 # compressed
 *.zip
+
+# serialized files ("pickles" directory)
+pickles/
